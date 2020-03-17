@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<Button>点击</Button>
+		<vButton size="small" disabled><span>Hello</span></vButton>
 	</div>
 </template>
 

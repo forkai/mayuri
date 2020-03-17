@@ -1,0 +1,44 @@
+/* css初始样式设置 */
+
+/* 清除默认样式 */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration-line: none;
+}
+
+p {
+	margin: 0;
+}
+
+/* 列表*/
+ul,
+li {
+	list-style: none;
+	margin: auto;
+	padding: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+/* 图片：防止图片过大 */
+
+img {
+	max-width: 100%;
+}
+
+/* 链接：去掉链接的下划线 */
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:link {
+	text-decoration: none;
+}

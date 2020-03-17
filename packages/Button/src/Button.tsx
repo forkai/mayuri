@@ -1,14 +1,15 @@
-import Vue from '../../main'
 import { isIncludes } from '../../utils/index'
+import '../../common/scss/reset.scss'
+import './Button.scss'
 
-export default Vue.extend({
-	name: 'Button',
+export default {
+	name: 'vButton',
 	props: {
 		size: {
-			validator(value) {
-				return isIncludes(value, ['small', 'large', 'default'])
+			validator(value: string) {
+				return isIncludes(value, ['small', 'large', 'middle'])
 			},
-			default: 'default',
+			default: 'middle',
 		},
 		disabled: {
 			type: Boolean,
@@ -17,9 +18,12 @@ export default Vue.extend({
 	},
 	render() {
 		return (
-			<button class={'btn-' + this.size} disabled="disabled">
-				<slot></slot>
+			<button
+				class={['btn', 'btn-' + this.size]}
+				disabled={this.disabled}
+			>
+				<slot>点击</slot>
 			</button>
 		)
 	},
-})
+}

@@ -2,12 +2,14 @@
   "name": "mayuri",
   "version": "0.1.0",
   "private": true,
+  "description": "a Responsive UI Library for Vue",
   "scripts": {
+    "lib":"vue-cli-service build --target lib --name mayuri --dest libs packages/index.ts",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/composition-api": "^0.4.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
   },

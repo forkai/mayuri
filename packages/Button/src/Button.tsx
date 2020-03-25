@@ -1,8 +1,9 @@
-import { isIncludes } from '../../utils/index'
+import { isIncludes } from '../../common/ts/index'
 import '../../common/scss/reset.scss'
 import './Button.scss'
+import Vue from 'vue'
 
-export default {
+export default Vue.extend({
 	name: 'vButton',
 	props: {
 		size: {
@@ -21,9 +22,10 @@ export default {
 			<button
 				class={['btn', 'btn-' + this.size]}
 				disabled={this.disabled}
+				onClick={alert('hello')}
 			>
-				<slot>点击</slot>
+				{(this.$scopedSlots as any).default()}
 			</button>
 		)
 	},
-}
+})

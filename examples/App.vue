@@ -1,6 +1,8 @@
 <template>
 	<div id="app">
-		<vButton size="small" disabled><span>Hello</span></vButton>
+		<vButton size="small" disabled>
+			<span>Hello</span>
+		</vButton>
 	</div>
 </template>
 
